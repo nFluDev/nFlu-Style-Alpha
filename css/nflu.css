@@ -1085,6 +1085,8 @@ img, svg, video, canvas {
 .card--project .card__thumb {
   position: relative;
   aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(6, 182, 212, 0.18));
   overflow: hidden;
   display: flex;
