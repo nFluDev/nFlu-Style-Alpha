@@ -214,7 +214,9 @@ Override CSS variables in your stylesheet:
 <!-- Project Card (YouTube-style) -->
 <div class="card card--project">
   <div class="card__thumb">
-    <img src="thumbnail.jpg" alt="Project">
+    <!-- Add your image here -->
+    <img src="your-image.jpg" alt="Project">
+    <!-- Or leave empty for default gradient background with placeholder icon -->
   </div>
   <div class="card__content">
     <div class="card__avatar">N</div>

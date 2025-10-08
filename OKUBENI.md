@@ -183,7 +183,9 @@ CSS değişkenlerini stil sayfanızda geçersiz kılın:
 <!-- Proje Kartı (YouTube-tarzı) -->
 <div class="card card--project">
   <div class="card__thumb">
-    <img src="thumbnail.jpg" alt="Proje">
+    <!-- Resminizi buraya ekleyin -->
+    <img src="resim.jpg" alt="Proje">
+    <!-- Veya boş bırakın, otomatik gradient arka plan ve ikon gösterir -->
   </div>
   <div class="card__content">
     <div class="card__avatar">N</div>
