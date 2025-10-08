@@ -1090,15 +1090,16 @@ img, svg, video, canvas {
 .card--project {
   height: fit-content;
   align-self: start;
+  min-height: 213px;
   display: flex;
   flex-direction: column;
 }
 
 .card--project .card__thumb {
   position: relative;
-  min-height: 180px;
-  max-height: 180px;
-  height: 180px;
+  min-height: 120px;
+  max-height: 120px;
+  height: 120px;
   width: 100%;
   
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(6, 182, 212, 0.18));
@@ -1107,21 +1108,15 @@ img, svg, video, canvas {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  line-height: 0;
+  font-size: 0;
 }
 
 /* Placeholder icon/text when no image */
-.card--project .card__thumb::before {
-  content: '🖼️';
-  font-size: 3rem;
-  opacity: 0.3;
-  position: absolute;
-  z-index: 0;
-}
+
 
 /* Hide placeholder when image exists */
-.card--project .card__thumb:has(img)::before {
-  display: none;
-}
+
 
 .card--project .card__thumb img {
   position: absolute;
@@ -1139,7 +1134,10 @@ img, svg, video, canvas {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.75rem;
-  padding: 0.75rem;
+  height: 93px;
+  margin-top: auto;
+  align-items: center;
+  padding: 12px;
 }
 
 .card--project .card__avatar {
