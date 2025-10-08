@@ -1,0 +1,45 @@
+{
+  "name": "nflu-style-alpha",
+  "version": "0.1.0",
+  "description": "A modern, glassmorphic component library built with vanilla HTML, CSS, and JavaScript",
+  "main": "js/nflu.js",
+  "style": "css/nflu.css",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "build": "echo \"Build complete\"",
+    "watch": "echo \"Watching for changes...\""
+  },
+  "keywords": [
+    "css",
+    "javascript",
+    "components",
+    "glassmorphism",
+    "design-system",
+    "ui-library",
+    "theme",
+    "dark-mode",
+    "accessible",
+    "responsive"
+  ],
+  "author": "Naer <naer@nflu.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nFlu-Style-Alpha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/nFlu-Style-Alpha/issues"
+  },
+  "homepage": "https://github.com/yourusername/nFlu-Style-Alpha#readme",
+  "files": [
+    "css/",
+    "js/",
+    "assets/",
+    "examples/",
+    "README.md",
+    "OKUBENI.md",
+    "LICENSE"
+  ],
+  "devDependencies": {},
+  "dependencies": {}
+}

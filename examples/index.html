@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="nFlu-Style-Alpha - Modern Glassmorphic Component Library">
+  <meta name="theme-color" content="#F7F9FC">
+  <title>nFlu-Style-Alpha - Component Library</title>
+  
+  <link rel="stylesheet" href="../css/nflu.css">
+  
+  <style>
+    /* Custom page styles */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .hero {
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+    
+    .section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section:last-of-type {
+      border-bottom: none;
+    }
+    
+    .section__title {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <a href="#" class="header__brand">nFlu-Style-Alpha</a>
+        
+        <nav class="header__nav">
+          <a href="#" class="header__link is-active">Home</a>
+          <a href="#components" class="header__link">Components</a>
+          <a href="./landing.html" class="header__link">Landing Demo</a>
+          <a href="./forms.html" class="header__link">Forms Demo</a>
+        </nav>
+        
+        <div class="header__actions">
+          <button class="toggle" data-toggle="theme" aria-label="Toggle theme">
+            <svg class="toggle__icon toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="toggle__icon toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          
+          <div class="dropdown">
+            <button class="btn btn--ghost btn--icon" data-dropdown aria-label="Menu" aria-haspopup="menu">
+              ☰
+            </button>
+            <div class="dropdown__menu" role="menu">
+              <a href="#" class="dropdown__item" role="menuitem">Documentation</a>
+              <a href="#" class="dropdown__item" role="menuitem">GitHub</a>
+              <div class="dropdown__divider"></div>
+              <a href="#" class="dropdown__item" role="menuitem">About</a>
+            </div>
+          </div>
+        </div>
+        
+        <button class="header__toggle" aria-label="Menu" aria-controls="mobile-nav" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <div class="panel panel--hero">
+          <h1 class="text-gradient">nFlu-Style-Alpha</h1>
+          <p class="text-xl">A modern, glassmorphic component library</p>
+          <div class="button-group" style="justify-content: center; margin-top: 2rem;">
+            <button class="btn btn--gradient btn--lg">Get Started</button>
+            <button class="btn btn--outline btn--lg">View on GitHub</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Buttons Section -->
+      <section class="section" id="buttons">
+        <h2 class="section__title">Buttons</h2>
+        
+        <h3 class="text-lg font-semibold mb-4">Button Variants</h3>
+        <div class="button-group">
+          <button class="btn btn--primary">Primary</button>
+          <button class="btn btn--secondary">Secondary</button>
+          <button class="btn btn--outline">Outline</button>
+          <button class="btn btn--ghost">Ghost</button>
+          <button class="btn btn--gradient">Gradient</button>
+        </div>
+        
+        <h3 class="text-lg font-semibold mb-4 mt-6">Button Sizes</h3>
+        <div class="button-group items-center">
+          <button class="btn btn--primary btn--sm">Small</button>
+          <button class="btn btn--primary">Default</button>
+          <button class="btn btn--primary btn--lg">Large</button>
+        </div>
+        
+        <h3 class="text-lg font-semibold mb-4 mt-6">Button States</h3>
+        <div class="button-group">
+          <button class="btn btn--primary">Normal</button>
+          <button class="btn btn--primary" disabled>Disabled</button>
+          <button class="btn btn--primary is-loading">Loading</button>
+        </div>
+        
+        <h3 class="text-lg font-semibold mb-4 mt-6">Icon Buttons</h3>
+        <div class="button-group">
+          <button class="btn btn--primary btn--icon btn--sm" aria-label="Search">🔍</button>
+          <button class="btn btn--primary btn--icon" aria-label="Settings">⚙️</button>
+          <button class="btn btn--primary btn--icon btn--lg" aria-label="Heart">❤️</button>
+        </div>
+      </section>
+
+      <!-- Cards Section -->
+      <section class="section" id="cards">
+        <h2 class="section__title">Cards</h2>
+        
+        <div class="demo-grid">
+          <div class="card">
+            <div class="card__header">
+              <h3>Basic Card</h3>
+            </div>
+            <div class="card__body">
+              <p>This is a basic card with a header, body, and footer.</p>
+            </div>
+            <div class="card__footer">
+              <button class="btn btn--primary btn--sm">Action</button>
+            </div>
+          </div>
+
+          <div class="card card--glass">
+            <div class="card__body">
+              <h3 class="mb-2">Glass Card</h3>
+              <p>Features glassmorphism with backdrop blur effect.</p>
+            </div>
+          </div>
+
+          <div class="card card--project">
+            <div class="card__thumb"></div>
+            <div class="card__content">
+              <div class="card__avatar">N</div>
+              <div class="card__meta">
+                <h3 class="card__title">Project Card</h3>
+                <p class="card__desc">YouTube-inspired project card with thumbnail and avatar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alerts Section -->
+      <section class="section" id="alerts">
+        <h2 class="section__title">Alerts</h2>
+        
+        <div class="alert alert--success">
+          <span class="alert__icon">✅</span>
+          <div class="alert__content">
+            <h4 class="alert__title">Success!</h4>
+            <p class="alert__message">Your changes have been saved successfully.</p>
+          </div>
+          <button class="alert__close" data-nflu-dismiss="alert" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="alert alert--error">
+          <span class="alert__icon">❌</span>
+          <div class="alert__content">
+            <h4 class="alert__title">Error</h4>
+            <p class="alert__message">Something went wrong. Please try again.</p>
+          </div>
+          <button class="alert__close" data-nflu-dismiss="alert" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="alert alert--warning">
+          <span class="alert__icon">⚠️</span>
+          <div class="alert__content">
+            <h4 class="alert__title">Warning</h4>
+            <p class="alert__message">Please review your input before proceeding.</p>
+          </div>
+          <button class="alert__close" data-nflu-dismiss="alert" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="alert alert--info">
+          <span class="alert__icon">ℹ️</span>
+          <div class="alert__content">
+            <h4 class="alert__title">Info</h4>
+            <p class="alert__message">Did you know? You can customize everything with CSS variables.</p>
+          </div>
+          <button class="alert__close" data-nflu-dismiss="alert" aria-label="Close">&times;</button>
+        </div>
+        
+        <button class="btn btn--primary mt-4" onclick="nflu.alerts.show('Programmatic alert!', 'success')">
+          Show Programmatic Alert
+        </button>
+      </section>
+
+      <!-- Badges Section -->
+      <section class="section" id="badges">
+        <h2 class="section__title">Badges</h2>
+        
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge--default">Default</span>
+          <span class="badge badge--accent">Accent</span>
+          <span class="badge badge--success">Success</span>
+          <span class="badge badge--error">Error</span>
+          <span class="badge badge--warning">Warning</span>
+          <span class="badge badge--info">Info</span>
+          <span class="badge badge--success badge--dot">With Dot</span>
+        </div>
+        
+        <h3 class="text-lg font-semibold mb-4 mt-6">Badge with Icons</h3>
+        <div class="relative inline-flex">
+          <button class="btn btn--primary btn--icon" aria-label="Notifications">
+            🔔
+          </button>
+          <span class="badge badge--error badge--count">5</span>
+        </div>
+      </section>
+
+      <!-- Avatars Section -->
+      <section class="section" id="avatars">
+        <h2 class="section__title">Avatars</h2>
+        
+        <div class="flex items-center gap-4">
+          <div class="avatar avatar--sm">NA</div>
+          <div class="avatar avatar--md">NA</div>
+          <div class="avatar avatar--lg">NA</div>
+          <div class="avatar avatar--lg avatar--ring">NR</div>
+        </div>
+      </section>
+
+      <!-- Forms Section -->
+      <section class="section" id="forms">
+        <h2 class="section__title">Forms</h2>
+        
+        <div class="grid grid-1 grid-md-2 gap-6">
+          <div class="field">
+            <label class="label" for="demo-email">Email Address</label>
+            <input type="email" id="demo-email" class="input" placeholder="you@example.com">
+            <span class="help">We'll never share your email.</span>
+          </div>
+
+          <div class="field">
+            <label class="label" for="demo-select">Country</label>
+            <select id="demo-select" class="select">
+              <option>United States</option>
+              <option>Canada</option>
+              <option>Mexico</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label" for="demo-textarea">Message</label>
+            <textarea id="demo-textarea" class="textarea" placeholder="Your message..."></textarea>
+          </div>
+
+          <div class="field is-invalid">
+            <label class="label" for="demo-error">Username (Invalid)</label>
+            <input type="text" id="demo-error" class="input" value="ab">
+            <span class="error">Username must be at least 3 characters.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spinners Section -->
+      <section class="section" id="spinners">
+        <h2 class="section__title">Spinners</h2>
+        
+        <div class="flex items-center gap-6">
+          <div class="spinner spinner--sm spinner--accent" aria-label="Loading"></div>
+          <div class="spinner spinner--accent" aria-label="Loading"></div>
+          <div class="spinner spinner--lg spinner--accent" aria-label="Loading"></div>
+        </div>
+      </section>
+
+      <!-- Modal Demo -->
+      <section class="section" id="modal">
+        <h2 class="section__title">Modal</h2>
+        
+        <button class="btn btn--primary" data-modal="#demoModal">
+          Open Modal
+        </button>
+      </section>
+
+      <!-- Typography Section -->
+      <section class="section" id="typography">
+        <h2 class="section__title">Typography</h2>
+        
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        
+        <p>This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, and <code>inline code</code>.</p>
+        
+        <p class="text-gradient text-3xl">Gradient Text</p>
+        
+        <blockquote>
+          "This is a blockquote. Great for testimonials and quotes."
+        </blockquote>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="demoModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <h3 class="modal__title">Modal Title</h3>
+        <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+      </div>
+      <div class="modal__body">
+        <p>This is a modal dialog. It features focus trapping, backdrop clicking to close, and Escape key support.</p>
+        <p>Try pressing the Tab key to navigate through the focusable elements.</p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--ghost" data-modal-close>Cancel</button>
+        <button class="btn btn--primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__container">
+        <div class="footer__section">
+          <h4 class="footer__title">nFlu-Style-Alpha</h4>
+          <p class="text-sm">A modern, glassmorphic component library.</p>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Links</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Documentation</a></li>
+            <li><a href="#" class="footer__link">Examples</a></li>
+            <li><a href="#" class="footer__link">GitHub</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Components</a></li>
+            <li><a href="#" class="footer__link">Utilities</a></li>
+            <li><a href="#" class="footer__link">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__copy">
+        <small>&copy; 2025 Naer. Built with ❤️ for developers.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/nflu.js"></script>
+</body>
+</html>
